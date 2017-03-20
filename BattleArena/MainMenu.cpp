@@ -26,11 +26,17 @@ bool MainMenu::StartMenu()
 
 	if (menuOption == 1)
 	{
-		//go to game main
+		game.StartGame(1); //go to game main
 		menuOption = 0;
 		return true;
 	}
 	else if (menuOption == 2)
+	{
+		game.StartGame(2); //go to game main
+		menuOption = 0;
+		return true;
+	}
+	else if (menuOption == 3)
 	{
 		return false;
 	}

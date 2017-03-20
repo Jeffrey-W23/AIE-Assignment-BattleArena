@@ -1,8 +1,18 @@
 #pragma once
+#include "Monsters.h"
 
-class Zombies
+enum AttackType
+{
+	bite,
+	scratch,
+	sit
+};
+
+class Zombies : public Monsters
 {
 public:
 	Zombies();
 	~Zombies();
+	int Attack(AttackType attackType) override;
+	void takeDamage(int damage) override;
 };

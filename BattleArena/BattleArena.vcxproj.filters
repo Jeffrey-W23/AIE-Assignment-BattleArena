@@ -30,6 +30,9 @@
     <ClCompile Include="Couches.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Monsters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenu.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Couches.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Monsters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
