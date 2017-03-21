@@ -2,6 +2,12 @@
 
 enum AttackType
 {
+	bite,
+	scratch,
+	sit,
+	reclin,
+	recliner,
+	reclinerer,
 };
 
 class Monsters

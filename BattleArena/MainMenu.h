@@ -12,5 +12,5 @@ public:
 
 private:
 	int menuOption;
-	Game game;
+	Game* game;
 };

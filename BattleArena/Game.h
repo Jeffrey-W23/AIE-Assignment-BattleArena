@@ -6,11 +6,14 @@ class Game
 {
 public:
 	Game();
+	Game(int playertype);
 	~Game();
-	void StartGame(int playertype);
+	void StartGame();
+	void BubbleSort(Monsters** data, int count);
 
 private:
-	Zombies* zombies[5];
-	Couches* couches[3];
+	Monsters** player;
+	Monsters** AI;
+	int playerSize;
+	int AISize;
 };
-

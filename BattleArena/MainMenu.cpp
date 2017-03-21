@@ -11,6 +11,7 @@ MainMenu::MainMenu()
 
 MainMenu::~MainMenu()
 {
+	// delete game
 }
 
 bool MainMenu::StartMenu()
@@ -26,13 +27,17 @@ bool MainMenu::StartMenu()
 
 	if (menuOption == 1)
 	{
-		game.StartGame(1); //go to game main
+		game = new Game(0);
+		game->StartGame();
+
 		menuOption = 0;
 		return true;
 	}
 	else if (menuOption == 2)
 	{
-		game.StartGame(2); //go to game main
+		game = new Game(1);
+		game->StartGame();
+
 		menuOption = 0;
 		return true;
 	}

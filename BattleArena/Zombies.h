@@ -1,13 +1,6 @@
 #pragma once
 #include "Monsters.h"
 
-enum AttackType
-{
-	bite,
-	scratch,
-	sit
-};
-
 class Zombies : public Monsters
 {
 public:

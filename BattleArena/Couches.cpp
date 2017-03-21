@@ -16,7 +16,7 @@ int Couches::Attack(AttackType attackType)
 	{
 		return 5;
 	}
-	else if (attackType == reclin)
+	else if (attackType == recliner)
 	{
 		return 15;
 	}
