@@ -60,17 +60,25 @@ void Game::StartGame() // chnage name
 	BubbleSort(player, playerSize); // Bubble Sort 
 	BubbleSort(AI, AISize); // Do a different type of sort
 	
+
+	system("cls");
 	int userInput;
 
 	// make an action
-	cout << "YOUR TURN:" << endl;
-	cout << "1. ATTACK" << endl;
-	cout << "2. TAUNT" << endl;
-	cout << "3. CHEER SELF UP" << endl;
+	cout << endl << "   ACTIONS:" << endl;
+	cout << "   1. ATTACK" << endl;
+	cout << "   2. TAUNT" << endl;
+	cout << "   3. CHEER SELF UP" << endl;
+	cout << "__________________________________________________________________________________________________________________________________" << endl;
+
 	cin >> userInput;
+	cin.clear();
+	cin.ignore(999999, '\n');
 
 	// Make an attack
 	cout << "SELECT ATTACK:" << endl;
+
+	//clear current view
 
 	// attack
 	if (userInput == 1)
@@ -87,16 +95,22 @@ void Game::StartGame() // chnage name
 		{
 			if (userInput == 1)
 			{
+				// draw
+				//pause
 				int damage = player[0]->Attack(bite);
 				AI[0]->takeDamage(damage);
 			}
 			else if (userInput == 2)
 			{
+				//draw
+				//pause
 				int damage = player[0]->Attack(scratch);
 				AI[0]->takeDamage(damage);
 			}
 			else if (userInput == 3)
 			{
+				//draw
+				//pause
 				int damage = player[0]->Attack(sit);
 				AI[0]->takeDamage(damage);
 			}
@@ -136,15 +150,15 @@ void Game::StartGame() // chnage name
 		{
 			if (userInput == 1 && player[0]->cheer > 65)
 			{
-				player[0]->cheer = 250;
+				player[0]->sanity = 250;
 			}
 			else if (userInput == 2 && player[0]->cheer > 35)
 			{
-				player[0]->cheer =+ 25;
+				player[0]->sanity =+ 25;
 			}
 			else if (userInput == 3 && player[0]->cheer > 30)
 			{
-				player[0]->cheer =+ 15;
+				player[0]->sanity =+ 15;
 			}
 			else
 			{

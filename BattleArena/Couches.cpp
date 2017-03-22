@@ -52,5 +52,5 @@ void Couches::lowerSanity(int damage)
 
 char* Couches::Taunts(int tauntId)
 {
-
+	return "";
 }

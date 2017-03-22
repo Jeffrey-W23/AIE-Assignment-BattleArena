@@ -26,7 +26,7 @@ void Monsters::lowerSanity(int damage)
 
 char* Monsters::Taunts(int tauntId)
 {
-
+	return "";
 }
 
 bool Monsters::Alive()

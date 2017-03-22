@@ -1,3 +1,4 @@
 ﻿  Game.cpp
-c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\game.cpp(114): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  BattleArena.vcxproj -> C:\Users\s171043\Documents\GitHub\AIE-Assignment-BattleArena\x64\Debug\BattleArena.exe
+c:\users\thomas wiltshire\desktop\pc\github\aie-assignment-battlearena\battlearena\game.cpp(128): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  BattleArena.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Assignment-BattleArena\x64\Debug\BattleArena.exe
+  BattleArena.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Assignment-BattleArena\x64\Debug\BattleArena.pdb (Full PDB)
