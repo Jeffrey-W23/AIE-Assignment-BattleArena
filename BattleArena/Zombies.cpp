@@ -39,3 +39,30 @@ void Zombies::takeDamage(int damage)
 		health = 0;
 	}
 }
+
+void Zombies::lowerSanity(int damage)
+{
+	sanity -= damage;
+
+	if (sanity < 0)
+	{
+		sanity = 0;
+	}
+}
+
+char* Zombies::Taunts(int tauntId)
+{
+	switch (tauntId)
+	{
+	case 0:		return "iPhone";					break;
+	case 1:		return "iPad";						break;
+	case 2:		return "AirPods";					break;
+	case 3:		return "Apple Watch";				break;
+	case 4:		return "MacBook";					break;
+	case 5:		return "iCloud";					break;
+	case 6:		return "iMac";						break;
+	case 7:		return "AirDrop";					break;
+	case 8:		return "Apple Pencil";				break;
+	case 9:		return "Night Shift";				break;
+	}
+}

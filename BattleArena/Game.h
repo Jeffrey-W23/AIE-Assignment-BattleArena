@@ -16,4 +16,5 @@ private:
 	Monsters** AI;
 	int playerSize;
 	int AISize;
+	int playerId;
 };

@@ -19,6 +19,16 @@ void Monsters::takeDamage(int damage)
 
 }
 
+void Monsters::lowerSanity(int damage)
+{
+
+}
+
+char* Monsters::Taunts(int tauntId)
+{
+
+}
+
 bool Monsters::Alive()
 {
 	if (health > 0)

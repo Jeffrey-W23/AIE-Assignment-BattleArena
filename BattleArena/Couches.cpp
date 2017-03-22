@@ -39,3 +39,18 @@ void Couches::takeDamage(int damage)
 		health = 0;
 	}
 }
+
+void Couches::lowerSanity(int damage)
+{
+	sanity -= damage;
+
+	if (sanity < 0)
+	{
+		sanity = 0;
+	}
+}
+
+char* Couches::Taunts(int tauntId)
+{
+
+}
