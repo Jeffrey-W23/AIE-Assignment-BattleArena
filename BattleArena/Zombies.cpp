@@ -4,6 +4,11 @@ Zombies::Zombies()
 {
 	health = 150;
 	sanity = 250;
+
+	if (sanity > 250)
+	{
+		sanity = 250;
+	}
 }
 
 Zombies::~Zombies()
@@ -54,7 +59,7 @@ char* Zombies::Taunts(int tauntId)
 {
 	switch (tauntId)
 	{
-	case 0:		return "iPhone";					break;
+	case 0:		return "You point at the couch, put one hand behind your back and with the other you \n   make it look like you are about to spill a $30 bottle of wine all over them.";					break;
 	case 1:		return "iPad";						break;
 	case 2:		return "AirPods";					break;
 	case 3:		return "Apple Watch";				break;

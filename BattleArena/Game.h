@@ -10,6 +10,9 @@ public:
 	~Game();
 	void StartGame();
 	void BubbleSort(Monsters** data, int count);
+	void Attack(int input);
+	void Taunt();
+	void Cheer(int input);
 
 private:
 	Monsters** player;
