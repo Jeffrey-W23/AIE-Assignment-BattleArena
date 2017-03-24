@@ -30,6 +30,14 @@ char* Monsters::Taunts(int tauntId)
 	return "";
 }
 
+void Monsters::Insane()
+{
+	if (insane)
+	{
+		health -= -10;
+	}
+}
+
 bool Monsters::Alive()
 {
 	if (health > 0)

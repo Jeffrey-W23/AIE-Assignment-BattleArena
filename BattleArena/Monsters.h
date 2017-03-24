@@ -19,7 +19,8 @@ public:
 	virtual void takeDamage(int damage);
 	virtual void lowerSanity(int damage);
 	virtual char* Taunts(int tauntId);
-	bool Alive();
+	void Insane(); // add to player and ai
+	bool Alive(); // add to player and ai
 
 	int health;
 	int sanity;

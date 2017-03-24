@@ -1,2 +1,85 @@
-﻿  Couches.cpp
-  BattleArena.vcxproj -> C:\Users\s171043\Documents\GitHub\AIE-Assignment-BattleArena\x64\Debug\BattleArena.exe
+﻿  Player.cpp
+  Human.cpp
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(66): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(66): error C2227: left of '->Attack' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(72): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(72): error C2227: left of '->Attack' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(78): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(78): error C2227: left of '->Attack' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(104): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(104): error C2227: left of '->Attack' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(110): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(110): error C2227: left of '->Attack' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(116): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(116): error C2227: left of '->Attack' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(150): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(150): error C2227: left of '->Taunts' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(154): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(154): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(166): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(166): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(175): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(175): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(177): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(177): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(179): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(179): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(180): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(180): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(182): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(182): error C2227: left of '->insane' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(185): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(185): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(187): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(187): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(188): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(188): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(190): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(190): error C2227: left of '->insane' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(193): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(193): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(195): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(195): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(196): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(196): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(198): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(198): error C2227: left of '->insane' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(219): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(219): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(228): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(228): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(230): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(230): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(232): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(232): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(233): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(233): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(235): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(235): error C2227: left of '->insane' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(238): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(238): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(240): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(240): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(241): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(241): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(243): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(243): error C2227: left of '->insane' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(246): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(246): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(248): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(248): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(249): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(249): error C2227: left of '->cheer' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(251): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(251): error C2227: left of '->insane' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(267): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(267): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(267): error C2227: left of '->sanityMax' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(269): error C2065: 'player': undeclared identifier
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(269): error C2227: left of '->sanity' must point to class/struct/union/generic type
+c:\users\s171043\documents\github\aie-assignment-battlearena\battlearena\human.cpp(269): error C2227: left of '->sanityMax' must point to class/struct/union/generic type
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Source.cpp
+  MainMenu.cpp
+  Game.cpp

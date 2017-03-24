@@ -27,6 +27,7 @@ void main()
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	SetWindowSize(130, 35);
+	srand((unsigned int)time(0));
 
 	bool gameRunning = true;
 

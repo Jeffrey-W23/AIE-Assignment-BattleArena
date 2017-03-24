@@ -144,16 +144,20 @@
   <ItemGroup>
     <ClCompile Include="Couches.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Human.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Monsters.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Zombies.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Couches.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Human.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Monsters.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Zombies.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
