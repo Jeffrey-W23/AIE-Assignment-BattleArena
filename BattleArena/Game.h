@@ -8,7 +8,7 @@ public:
 	Game();
 	Game(int playertype);
 	~Game();
-	void StartGame();
+	void MainFunction();
 	void BubbleSort(Monsters** data, int count);
 	void Attack(int input);
 	void Taunt();

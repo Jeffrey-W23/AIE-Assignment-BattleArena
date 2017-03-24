@@ -28,7 +28,7 @@ bool MainMenu::StartMenu()
 	if (menuOption == 1)
 	{
 		game = new Game(0);
-		game->StartGame();
+		game->MainFunction();
 
 		menuOption = 0;
 		return true;
@@ -36,7 +36,7 @@ bool MainMenu::StartMenu()
 	else if (menuOption == 2)
 	{
 		game = new Game(1);
-		game->StartGame();
+		game->MainFunction();
 
 		menuOption = 0;
 		return true;

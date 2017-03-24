@@ -3,12 +3,8 @@
 Couches::Couches()
 {
 	health = 250;
-	sanity = 100;
-
-	if (sanity > 100)
-	{
-		sanity = 100;
-	}
+	sanity = 150;
+	sanityMax = 150;
 }
 
 Couches::~Couches()

@@ -24,5 +24,7 @@ public:
 	int health;
 	int sanity;
 	int cheer;
+	bool insane;
+	int sanityMax;
 };
 

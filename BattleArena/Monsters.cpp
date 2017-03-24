@@ -3,6 +3,7 @@
 Monsters::Monsters()
 {
 	cheer = 0;
+	insane = false;
 }
 
 Monsters::~Monsters()

@@ -4,11 +4,7 @@ Zombies::Zombies()
 {
 	health = 150;
 	sanity = 250;
-
-	if (sanity > 250)
-	{
-		sanity = 250;
-	}
+	sanityMax = 250;
 }
 
 Zombies::~Zombies()
@@ -52,6 +48,7 @@ void Zombies::lowerSanity(int damage)
 	if (sanity < 0)
 	{
 		sanity = 0;
+		insane = true;
 	}
 }
 

@@ -55,7 +55,7 @@ Game::~Game()
 	//delete couches and zombies
 }
 
-void Game::StartGame() // chnage name
+void Game::MainFunction()
 {
 	srand(time(0));
 	bool gameRunning = true;
@@ -129,7 +129,7 @@ void Game::BubbleSort(Monsters** data, int count)
 	}
 }
 
-void Game::Attack(int input) // try to make this for both. pass in a rand for when it is the AI turn.
+void Game::Attack(int input) // try to make this for both and pass in a rand for when it is the AI turn.
 {
 	input = 0;
 
@@ -229,20 +229,28 @@ void Game::Attack(int input) // try to make this for both. pass in a rand for wh
 	}
 }
 
-void Game::Taunt() // Balance //if sanity is lower then 0 stop it at 0 and cause -5 health a turn.
+void Game::Taunt() // Balance // if sanity is lower then 0 stop it at 0 and cause -5 health a turn.
 {
 	int sanity;
 	int randTaunt;
 
 	if (AI[0]->sanity > 0)
 	{
-		sanity = rand() % 46;
-		randTaunt = rand() % 11;
+		if (playerId == 0)
+		{
+			sanity = rand() % 35;
+			randTaunt = rand() % 10;
+		}
+		else if (playerId == 1)
+		{
+			sanity = rand() % 28;
+			randTaunt = rand() % 10;
+		}
 
 		AI[0]->lowerSanity(sanity);
 		player[0]->cheer += (sanity / 2);
 
-		cout << "   You taunt your opponent:" << endl;
+		cout << "   You taunt your opponent:" << endl << endl;
 		cout << "   " << player[0]->Taunts(randTaunt) << endl;
 
 		if (AI[0]->sanity < 100 && AI[0]->sanity > 20)
@@ -269,51 +277,115 @@ void Game::Cheer(int input) // maybe have different cheer store for couch and zo
 {
 	input = 0;
 
-	system("cls");
-	cout << endl;
-	cout << "   CHEER STORE:" << endl;
-	cout << "   You have " << player[0]->cheer << " cheer" << endl << endl;
-	cout << "   1. RESTORE ALL SANITY - 65 cheer" << endl;
-	cout << "   2. RESTORE 25 - Cost 35 cheer" << endl;
-	cout << "   3. RESTORE 15 - Cost 30 cheer" << endl;
-
-	cin >> input;
-	cin.clear();
-	cin.ignore(999999, '\n');
-
-	if (player[0]->sanity < 250)
+	if (playerId == 0)
 	{
-		if (input == 1 && player[0]->cheer > 65)
+		system("cls");
+		cout << endl;
+		cout << "   CHEER STORE:" << endl;
+		cout << "   You have " << player[0]->cheer << " cheer" << endl << endl;
+		cout << "   1. RESTORE ALL SANITY - 65 cheer" << endl;
+		cout << "   2. RESTORE 25 - Cost 35 cheer" << endl;
+		cout << "   3. RESTORE 15 - Cost 30 cheer" << endl;
+
+		cin >> input;
+		cin.clear();
+		cin.ignore(999999, '\n');
+
+		if (player[0]->sanity < 250)
 		{
-			player[0]->sanity = 250;
-			player[0]->cheer -= 65;
-			cout << "   You have restored 250 of your sanity." << endl;
-			_getch();
-		}
-		else if (input == 2 && player[0]->cheer > 35)
-		{
-			player[0]->sanity += 25;
-			player[0]->cheer -= 35;
-			cout << "   You have restored 25 of your sanity." << endl;
-			_getch();
-		}
-		else if (input == 3 && player[0]->cheer > 30)
-		{
-			player[0]->sanity += 15;
-			player[0]->cheer -= 30;
-			cout << "   You have restored 15 of your sanity." << endl;
-			_getch();
+			if (input == 1 && player[0]->cheer > 65)
+			{
+				player[0]->sanity = 250;
+				player[0]->cheer -= 65;
+				cout << "   You have restored 250 of your sanity." << endl;
+				player[0]->insane = false;
+				_getch();
+			}
+			else if (input == 2 && player[0]->cheer > 35)
+			{
+				player[0]->sanity += 25;
+				player[0]->cheer -= 35;
+				cout << "   You have restored 25 of your sanity." << endl;
+				player[0]->insane = false;
+				_getch();
+			}
+			else if (input == 3 && player[0]->cheer > 30)
+			{
+				player[0]->sanity += 15;
+				player[0]->cheer -= 30;
+				cout << "   You have restored 15 of your sanity." << endl;
+				player[0]->insane = false;
+				_getch();
+			}
+			else
+			{
+				cout << "   Either you dont have enough cheer or thats not a valid option.. you're not a couch, use your brain please." << endl;
+				_getch();
+			}
 		}
 		else
 		{
-			cout << "   Either you dont have enough cheer or thats not a valid option.. you're not a couch, use your brain please." << endl;
+			cout << "   You dont need these man, trust me." << endl;
 			_getch();
 		}
 	}
-	else
+	
+	else if (playerId == 1)
 	{
-		cout << "   You dont need these man, trust me." << endl;
-		_getch();
+		system("cls");
+		cout << endl;
+		cout << "   CHEER STORE:" << endl;
+		cout << "   You have " << player[0]->cheer << " cheer" << endl << endl;
+		cout << "   1. RESTORE ALL SANITY - 45 cheer" << endl;
+		cout << "   2. RESTORE 25 - Cost 30 cheer" << endl;
+		cout << "   3. RESTORE 15 - Cost 15 cheer" << endl;
+
+		cin >> input;
+		cin.clear();
+		cin.ignore(999999, '\n');
+
+		if (player[0]->sanity < 150)
+		{
+			if (input == 1 && player[0]->cheer > 65)
+			{
+				player[0]->sanity = 250;
+				player[0]->cheer -= 45;
+				cout << "   You have restored 250 of your sanity." << endl;
+				player[0]->insane = false;
+				_getch();
+			}
+			else if (input == 2 && player[0]->cheer > 30)
+			{
+				player[0]->sanity += 25;
+				player[0]->cheer -= 30;
+				cout << "   You have restored 25 of your sanity." << endl;
+				player[0]->insane = false;
+				_getch();
+			}
+			else if (input == 3 && player[0]->cheer > 15)
+			{
+				player[0]->sanity += 15;
+				player[0]->cheer -= 15;
+				cout << "   You have restored 15 of your sanity." << endl;
+				player[0]->insane = false;
+				_getch();
+			}
+			else
+			{
+				cout << "   Either you dont have enough cheer or thats not a valid option.. you are a couch right? please grow up and act like one." << endl;
+				_getch();
+			}
+		}
+		else
+		{
+			cout << "   You dont need these man, trust me." << endl;
+			_getch();
+		}
+	}
+
+	if (player[0]->sanity > player[0]->sanityMax)
+	{
+		player[0]->sanity = player[0]->sanityMax;
 	}
 }
 
