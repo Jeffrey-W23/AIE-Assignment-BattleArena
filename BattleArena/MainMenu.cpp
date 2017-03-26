@@ -9,12 +9,16 @@ using namespace std;
 // Default Constructor
 MainMenu::MainMenu()
 {
+	// initialize to null
+	game = nullptr;
 }
 
 // Default Destructor
 MainMenu::~MainMenu()
 {
-	delete game;
+	// if null delete
+	if (game)
+		delete game;
 }
 
 // Menu function. Runs the logic of the main menu
