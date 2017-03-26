@@ -1,12 +1,17 @@
+//#include, using etc
 #include "Human.h"
 
+// Default Constructor
 Human::Human()
 {
+	// initialize values
 	monsterCount = 0;
 }
 
+// Constructor passing in the player type
 Human::Human(int playertype)
 {
+	// initialize zombies army if zombies
 	if (playertype == 0)
 	{
 		monsterCount = 5;
@@ -18,6 +23,8 @@ Human::Human(int playertype)
 			playerId = playertype;
 		}
 	}
+
+	// initialize couches army if couches
 	else if (playertype == 1)
 	{
 		monsterCount = 3;
@@ -31,8 +38,10 @@ Human::Human(int playertype)
 	}
 }
 
+// Default Destructor
 Human::~Human()
 {
+	//delete human army
 	for (int i = 0; i < monsterCount; ++i)
 	{
 		delete army[i];
@@ -41,41 +50,44 @@ Human::~Human()
 	delete[] army;
 }
 
+// Function for Attacking
 int Human::Attack(int input) // return damage
 {
 	input = 0;
 
 	int damage;
 
-	// Make an attack
+	// Make an attack if zombie
 	if (playerId == 0)
 	{
-		system("cls");
+		// display options
 		cout << endl;
 		cout << "   SELECT ATTACK:" << endl;
 		cout << "   1. BITE" << endl;
 		cout << "   2. SCRATCH" << endl;
 		cout << "   3. SIT" << endl;
 
+		// get input
 		cin >> input;
 		cin.clear();
 		cin.ignore(999999, '\n');
 
+		// attacks
 		if (input == 1)
 		{
-			damage = player[0]->Attack(bite);
+			damage = army[0]->Attack(bite);
 			cout << "   You bite the couch dealing 30 damage!" << endl;
 			return damage;
 		}
 		else if (input == 2)
 		{
-			damage = player[0]->Attack(scratch);
+			damage = army[0]->Attack(scratch);
 			cout << "   You scratch at the couch dealing 25 damage!" << endl;
 			return damage;
 		}
 		else if (input == 3)
 		{
-			damage = player[0]->Attack(sit);
+			damage = army[0]->Attack(sit);
 			cout << "   You sit on the couch.. this is a nasty move dealing 60 damage!" << endl;
 			return damage;
 		}
@@ -86,34 +98,37 @@ int Human::Attack(int input) // return damage
 		}
 	}
 
+	// Make an attack if couch
 	else if (playerId == 1)
 	{
-		system("cls");
+		// display options
 		cout << endl;
 		cout << "   SELECT ATTACK:" << endl;
 		cout << "   1. RECLIN" << endl;
 		cout << "   2. RECLINER" << endl;
 		cout << "   3. RECLINERER" << endl;
 
+		// get input
 		cin >> input;
 		cin.clear();
 		cin.ignore(999999, '\n');
 
+		// attacks
 		if (input == 1)
 		{
-			damage = player[0]->Attack(reclin);
+			damage = army[0]->Attack(reclin);
 			cout << "   You lay back and relax dealing 5 damage!" << endl;
 			return damage;
 		}
 		else if (input == 2)
 		{
-			damage = player[0]->Attack(recliner);
+			damage = army[0]->Attack(recliner);
 			cout << "   You lay further back dealing 15 damage!" << endl;
 			return damage;
 		}
 		else if (input == 3)
 		{
-			damage = player[0]->Attack(reclinerer);
+			damage = army[0]->Attack(reclinerer);
 			cout << "   You use your finishing move reclinerer! it deals an amazing 100 damage!" << endl;
 			return damage;
 		}
@@ -130,11 +145,14 @@ int Human::Attack(int input) // return damage
 	}
 }
 
-int Human::Taunt() // return taunt
+// Function for taunting
+int Human::Taunt()
 {
+	//declare vars
 	int sanity;
 	int randTaunt;
 
+	// set randoms input
 	if (playerId == 0)
 	{
 		sanity = rand() % 35;
@@ -146,24 +164,29 @@ int Human::Taunt() // return taunt
 		randTaunt = rand() % 10;
 	}
 
+	// get a random taunt message and taunt the player
+	cout << endl;
 	cout << "   You taunt your opponent:" << endl << endl;
-	cout << "   " << player[0]->Taunts(randTaunt) << endl;
+	cout << "   " << army[0]->Taunts(randTaunt) << endl;
 
+	// add some cheer points to the team member
+	army[0]->cheer += (sanity / 2);
+
+	cout << endl << endl << "   You got " << army[0]->cheer << " cheer points for this team member!" << endl;
+	cout << "   Use these points in the cheer menu to make this team member feel better." << endl;
 	return sanity;
-
-	player[0]->cheer += (sanity / 2);
 }
 
+// function for using the cheer store
 void Human::Cheer(int input)
 {
 	input = 0;
 
 	if (playerId == 0)
 	{
-		system("cls");
 		cout << endl;
 		cout << "   CHEER STORE:" << endl;
-		cout << "   You have " << player[0]->cheer << " cheer" << endl << endl;
+		cout << "   You have " << army[0]->cheer << " cheer" << endl << endl;
 		cout << "   1. RESTORE ALL SANITY - 65 cheer" << endl;
 		cout << "   2. RESTORE 25 - Cost 35 cheer" << endl;
 		cout << "   3. RESTORE 15 - Cost 30 cheer" << endl;
@@ -172,51 +195,55 @@ void Human::Cheer(int input)
 		cin.clear();
 		cin.ignore(999999, '\n');
 
-		if (player[0]->sanity < 250)
+		if (army[0]->sanity < 250)
 		{
-			if (input == 1 && player[0]->cheer > 65)
+			if (input == 1 && army[0]->cheer >= 65)
 			{
-				player[0]->sanity = 250;
-				player[0]->cheer -= 65;
+				army[0]->sanity = 250;
+				army[0]->cheer -= 65;
 				cout << "   You have restored 250 of your sanity." << endl;
-				player[0]->insane = false;
+				army[0]->insane = false;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
-			else if (input == 2 && player[0]->cheer > 35)
+			else if (input == 2 && army[0]->cheer >= 35)
 			{
-				player[0]->sanity += 25;
-				player[0]->cheer -= 35;
+				army[0]->sanity += 25;
+				army[0]->cheer -= 35;
 				cout << "   You have restored 25 of your sanity." << endl;
-				player[0]->insane = false;
+				army[0]->insane = false;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
-			else if (input == 3 && player[0]->cheer > 30)
+			else if (input == 3 && army[0]->cheer >= 30)
 			{
-				player[0]->sanity += 15;
-				player[0]->cheer -= 30;
+				army[0]->sanity += 15;
+				army[0]->cheer -= 30;
 				cout << "   You have restored 15 of your sanity." << endl;
-				player[0]->insane = false;
+				army[0]->insane = false;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
 			else
 			{
 				cout << "   Either you dont have enough cheer or thats not a valid option.. you're not a couch, use your brain please." << endl;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
 		}
 		else
 		{
 			cout << "   You dont need these man, trust me." << endl;
+			cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 			_getch();
 		}
 	}
 
 	else if (playerId == 1)
 	{
-		system("cls");
 		cout << endl;
 		cout << "   CHEER STORE:" << endl;
-		cout << "   You have " << player[0]->cheer << " cheer" << endl << endl;
+		cout << "   You have " << army[0]->cheer << " cheer" << endl << endl;
 		cout << "   1. RESTORE ALL SANITY - 45 cheer" << endl;
 		cout << "   2. RESTORE 25 - Cost 30 cheer" << endl;
 		cout << "   3. RESTORE 15 - Cost 15 cheer" << endl;
@@ -225,47 +252,52 @@ void Human::Cheer(int input)
 		cin.clear();
 		cin.ignore(999999, '\n');
 
-		if (player[0]->sanity < 150)
+		if (army[0]->sanity < 150)
 		{
-			if (input == 1 && player[0]->cheer > 65)
+			if (input == 1 && army[0]->cheer >= 45)
 			{
-				player[0]->sanity = 250;
-				player[0]->cheer -= 45;
+				army[0]->sanity = 250;
+				army[0]->cheer -= 45;
 				cout << "   You have restored 250 of your sanity." << endl;
-				player[0]->insane = false;
+				army[0]->insane = false;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
-			else if (input == 2 && player[0]->cheer > 30)
+			else if (input == 2 && army[0]->cheer >= 30)
 			{
-				player[0]->sanity += 25;
-				player[0]->cheer -= 30;
+				army[0]->sanity += 25;
+				army[0]->cheer -= 30;
 				cout << "   You have restored 25 of your sanity." << endl;
-				player[0]->insane = false;
+				army[0]->insane = false;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
-			else if (input == 3 && player[0]->cheer > 15)
+			else if (input == 3 && army[0]->cheer >= 15)
 			{
-				player[0]->sanity += 15;
-				player[0]->cheer -= 15;
+				army[0]->sanity += 15;
+				army[0]->cheer -= 15;
 				cout << "   You have restored 15 of your sanity." << endl;
-				player[0]->insane = false;
+				army[0]->insane = false;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
 			else
 			{
 				cout << "   Either you dont have enough cheer or thats not a valid option.. you are a couch right? please grow up and act like one." << endl;
+				cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 				_getch();
 			}
 		}
 		else
 		{
 			cout << "   You dont need these man, trust me." << endl;
+			cout << endl << endl << "   PRESS ANY KEY TO CONTINUE..." << endl;
 			_getch();
 		}
 	}
 
-	if (player[0]->sanity > player[0]->sanityMax)
+	if (army[0]->sanity > army[0]->sanityMax)
 	{
-		player[0]->sanity = player[0]->sanityMax;
+		army[0]->sanity = army[0]->sanityMax;
 	}
 }

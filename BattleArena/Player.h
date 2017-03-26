@@ -1,3 +1,4 @@
+//#include, using etc
 #pragma once
 #include "Monsters.h"
 #include "Zombies.h"
@@ -7,17 +8,36 @@
 #include <iostream>
 using namespace std;
 
+// player object
 class Player
 {
 public:
-	Player();
-	~Player();
-	virtual int Attack(int input);
-	virtual int Taunt();
-	virtual void Cheer(int input);
-	virtual void BubbleSort();
 
+	// Default Constructor
+	Player();
+
+	// Default Destructor
+	~Player();
+	
+	// function for attacking
+	virtual int Attack(int input);
+	
+	// Function for taunting
+	virtual int Taunt();
+	
+	// Function for using the cheer store
+	virtual void Cheer(int input);
+	
+	// Bubble sort function
+	virtual void BubbleSort();
+	
+	// Insertion sort function
+	virtual void InsertionSort();
+
+	// monster object
 	Monsters** army;
+
+	// declare vars
 	int playerId;
 	int monsterCount;
 };
